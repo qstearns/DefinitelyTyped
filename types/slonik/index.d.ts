@@ -144,17 +144,7 @@ export type DatabasePoolType = CommonQueryMethodsType & {
     transaction: <T>(handler: TransactionFunctionType<T>) => Promise<T>;
 };
 
-export type DatabaseConfigurationType =
-    | string
-    | {
-        database?: string;
-        host?: string;
-        idleTimeoutMillis?: number;
-        max?: number;
-        password?: string;
-        port?: number;
-        user?: string;
-    };
+export type DatabaseConfigurationType = string;
 
 export type ConnectionTypeType =
     | 'EXPLICIT'
